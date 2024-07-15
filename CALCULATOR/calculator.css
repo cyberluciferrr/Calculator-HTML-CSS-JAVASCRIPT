@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.theme img {
+  width: 30px;
+  height: 30px;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--calculator-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.input {
+  width: calc(60px * 5 + 10px * 4); /* Adjusting width to match the buttons */
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--input-color);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.function {
+  background-color: var(--function-bg);
+  color: var(--function-color);
+}
+
+.operator {
+  background-color: var(--operator-bg);
+  color: var(--operator-color);
+}
+
+.numbers {
+  background-color: var(--button-bg);
+  color: var(--button-color);
+}
+
+/* Dark Theme */
+:root {
+  --background-color: #121212;
+  --calculator-bg: #1e1e1e;
+  --input-bg: #252525;
+  --input-color: #ffffff;
+  --button-bg: #333333;
+  --button-color: #ffffff;
+  --button-hover-bg: #444444;
+  --function-bg: #ff9500;
+  --function-color: #ffffff;
+  --operator-bg: #ff9500;
+  --operator-color: #ffffff;
+  --border-color: #ead9d9;
+}
+
+/* Light Theme */
+:root.light-theme {
+  --background-color: #69d8c7;
+  --calculator-bg: #ffffff;
+  --input-bg: #e0e0e0;
+  --input-color: #000000;
+  --button-bg: #ffffff;
+  --button-color: #000000;
+  --button-hover-bg: #e0e0e0;
+  --function-bg: #ff9500;
+  --function-color: #ffffff;
+  --operator-bg: #ff9500;
+  --operator-color: #ffffff;
+  --border-color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .calculator {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+  }
+
+  .input {
+    font-size: 1.2em;
+    width: calc(50px * 5 + 10px * 4);
+  }
+}
